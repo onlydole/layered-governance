@@ -19,4 +19,12 @@ terraform {
       version = "~> 0.0"
     }
   }
+
+  backend "remote" {
+    organization = "onlydole"
+
+    workspaces {
+      name = "layered-governance"
+    }
+  }
 }

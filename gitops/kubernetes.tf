@@ -1,7 +1,8 @@
+# Configures the two Kubernetes providers we need for a Flux bootstrap
 provider "kubectl" {}
-
 provider "kubernetes" {}
 
+# Creates the flux-system namespace
 resource "kubernetes_namespace" "flux_system" {
   metadata {
     name = "flux-system"
